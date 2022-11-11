@@ -1,8 +1,8 @@
 import { FC } from "react";
 import StartButton from "../../components/common/startbutton/StartButton.component";
-import StyledStartPage from "./StartPage.style"
+import StyledStartPage from "./StartScreen.style"
 
-const StartPage:FC = () => {
+const StartScreen:FC = () => {
 
     return (
         <StyledStartPage>
@@ -11,4 +11,4 @@ const StartPage:FC = () => {
     )
 }
 
-export default StartPage;
+export default StartScreen;

@@ -1,12 +1,12 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
+import { useAppsData } from "../../../../utilities/globalzustandstates/applications.data";
 import Start from "./start/Start.component";
 import StyledToolbar from "./Toolbar.style";
-import appsData from "../../../../utilities/dataofapplications/applications.data";
 import ToolbarIcon from "./toolbaricon/ToolbarIcon.component";
 
-const Toolbar: FC = () => {
 
-    console.log(appsData);
+const Toolbar: FC = () => {
+    const { updateAppData, appsData } = useAppsData();
 
     return (
         <>

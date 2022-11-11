@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps & {theme: any}>`
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+        font-family: 'Signika Negative';
     }
 
     body {

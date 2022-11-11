@@ -9,6 +9,7 @@ import { getAuthPage } from "../../components/service/Links.service";
 import StyledDesktop from "./Desktop.style";
 import ToolbarContainer from "./utils/toolbarcontainer/ToolbarContainer.style";
 import AppWindow from "../../components/common/desktopcomponents/appwindow/AppWindow.component";
+import DesktopItems from "./utils/desktopitems/DesktopItems.component";
 
 const Desktop: FC = () => {
     const navigate = useNavigate()
@@ -33,11 +34,10 @@ const Desktop: FC = () => {
     return (
         <StyledDesktop wallpaper={desktopSettings.wallpaper}>
             <h1>Desktop, hello {sessionUser.username}</h1>
-            <DesktopBlurElement></DesktopBlurElement>
+            <DesktopItems />
             <ToolbarContainer>
                 <Toolbar />
             </ToolbarContainer>
-            <AppWindow />
         </StyledDesktop>
     )
 }
