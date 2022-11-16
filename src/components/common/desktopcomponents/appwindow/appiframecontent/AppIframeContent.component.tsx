@@ -1,14 +1,16 @@
 import { FC } from "react"
 import StyledAppIframeContent from "./AppIframeContent.style"
 
-const AppIframeContent:FC = () => {
+interface AppIframeContentProps {
+    src: string,
+}
+
+const AppIframeContent:FC<AppIframeContentProps> = (props) => {
     
     return (
         <StyledAppIframeContent
             title="app"
-            width={700}
-            height={700}
-            src={("https://www.google.pl/?igu=1")}>
+            src={props.src}>
         </StyledAppIframeContent>
     )
 }

@@ -6,14 +6,16 @@ import StyledDesktopItems from "./DesktopItems.style";
 const DesktopItems:FC = () => {
     
     const { appsData, setAppsData, updateAppData } = useAppsData(); 
-    
+
     return (
         <StyledDesktopItems>
             {
                 appsData.map(app => <AppIcon
                     appIMG={app.icon}
                     key={app.id}
-                    appName={app.name} />)
+                    appName={app.name}
+                    appID={app.id}
+                />)
             }
         </StyledDesktopItems>
     )

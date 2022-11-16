@@ -17,7 +17,7 @@ const Toolbar: FC = () => {
                         .map((app) =>
                             <ToolbarIcon key={app.id} name={app.name} icon={app.icon} />
                         )
-                };
+                }
             </StyledToolbar>
         </>
     );

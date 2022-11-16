@@ -10,11 +10,13 @@ import StyledDesktop from "./Desktop.style";
 import ToolbarContainer from "./utils/toolbarcontainer/ToolbarContainer.style";
 import AppWindow from "../../components/common/desktopcomponents/appwindow/AppWindow.component";
 import DesktopItems from "./utils/desktopitems/DesktopItems.component";
+import { useAppsData } from "../../utilities/globalzustandstates/applications.data";
 
 const Desktop: FC = () => {
     const navigate = useNavigate()
     const { sessionUser } = useSession();
     const { desktopSettings, setDesktopSettings } = useDesktopSettings()
+    const { appsData, setAppsData, updateAppData } = useAppsData();
 
     useEffect(() => {
         if (Object.keys(sessionUser).length === 0) {
@@ -29,11 +31,21 @@ const Desktop: FC = () => {
         })
         console.log(desktopSettings.wallpaper)
     }, [])
-    
-    
+     
+
     return (
         <StyledDesktop wallpaper={desktopSettings.wallpaper}>
             <h1>Desktop, hello {sessionUser.username}</h1>
+            <>
+                {
+                    appsData.filter(app => app.isOpen === true).map(app => {
+                        return (<AppWindow
+                            key={app.id}
+                            app={app}
+                        />);
+                    })     
+                }
+            </>
             <DesktopItems />
             <ToolbarContainer>
                 <Toolbar />

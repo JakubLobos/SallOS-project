@@ -2,6 +2,7 @@ import zustand from "zustand";
 
 interface appsDataProps {
     name: string,
+    type: "app" | "catalog",
     url: string,
     icon: string,
     isPinned: boolean,
@@ -13,6 +14,7 @@ interface appsDataProps {
 const appsData: Array<appsDataProps> = [
   {
     name: "chrome",
+    type: "app",
     url: "https://www.google.pl/?igu=1",
     icon: "https://pnggrid.com/wp-content/uploads/2021/04/Google-Chrome-Logo-2048x2048.png",
     isPinned: true,
@@ -21,6 +23,7 @@ const appsData: Array<appsDataProps> = [
   },
   {
     name: "youtube",
+    type: "app",
     url: "https://www.youtube.com/",
     icon: "https://www.queeky.com/sites/default/files/images/YouTube-icon-full_color_0.png",
     isPinned: false,
@@ -29,8 +32,9 @@ const appsData: Array<appsDataProps> = [
   },
   {
     name: "folder",
+    type: "catalog",
     url: "https://www.youtube.com/",
-    icon: "https://www.queeky.com/sites/default/files/images/YouTube-icon-full_color_0.png",
+    icon: "https://www.iconpacks.net/icons/2/free-folder-icon-1484-thumb.png",
     isPinned: false,
     isOpen: false,
     id: 2,

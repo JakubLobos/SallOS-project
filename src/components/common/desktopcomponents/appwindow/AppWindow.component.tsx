@@ -1,12 +1,30 @@
 import WindowWrapper from "./AppWindow.style";
 import chromeicon from "../../../../img/static/icons/chrome.png"
-import React, { FC, PropsWithChildren } from "react";
+import React, { FC, PropsWithChildren, useState } from "react";
+import AppIframeContent from "./appiframecontent/AppIframeContent.component";
+import AppWindowHeading from "./appwindowheading/AppWindowHeading.component";
 
-const AppWindow: FC<PropsWithChildren> = (props) => {
+interface AppWindowProps {
+    app?: any,
+}
+
+const AppWindow: FC<AppWindowProps> = (props) => {
+    
+    const [cursorPosition, setCursorPosition] = useState({
+        x: 30,
+        y: 30,
+    });
 
     return (
-        <WindowWrapper>
-            {props.children}
+        <WindowWrapper
+            // style={{ left: cursorPosition.x + "px", top: cursorPosition.y + "px"}}
+            xpos={cursorPosition.x} ypos={cursorPosition.y}
+        >
+            <AppWindowHeading getCursorPosition={ setCursorPosition } />
+            <p>{props.app.name}</p>
+            <div className="IframeWrapper">
+                <AppIframeContent src={props.app.url} />
+            </div>
         </WindowWrapper>
     )
 };
