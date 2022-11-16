@@ -17,11 +17,16 @@ const AppWindow: FC<AppWindowProps> = (props) => {
 
     return (
         <WindowWrapper
-            // style={{ left: cursorPosition.x + "px", top: cursorPosition.y + "px"}}
-            xpos={cursorPosition.x} ypos={cursorPosition.y}
-        >
-            <AppWindowHeading getCursorPosition={ setCursorPosition } />
-            <p>{props.app.name}</p>
+            style={{
+                left: cursorPosition.x + "px",
+                top: cursorPosition.y + "px"
+            }}>
+            <AppWindowHeading
+                getCursorPosition={setCursorPosition}
+                appIcon={props.app.icon}
+                appName={props.app.name}
+
+            />
             <div className="IframeWrapper">
                 <AppIframeContent src={props.app.url} />
             </div>

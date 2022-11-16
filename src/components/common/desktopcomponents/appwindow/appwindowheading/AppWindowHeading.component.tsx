@@ -6,6 +6,8 @@ interface AppWindowHeadingProps {
         x: number;
         y: number;
     }>>,
+    appName: "string",
+    appIcon: "string",
 }
 
 const AppWindowHeading: FC<AppWindowHeadingProps> = (props) => {
@@ -24,6 +26,10 @@ const AppWindowHeading: FC<AppWindowHeadingProps> = (props) => {
             onDragCapture={(event) => moveWindow(event)}
             onDragEnd={(event) => moveWindow(event)}
         >
+        <div>
+                <img alt={props.appName} src={props.appIcon} />
+                <p>{ props.appName }</p>
+        </div>
         </StyledAppWindowHeading>
     )
 };

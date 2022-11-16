@@ -6,12 +6,29 @@ const StyledAppWindowHeading = styled.header`
     display: flex;
     align-items: center;
     user-select: select;
-    background-color: red;
+    position: relative;
 
-    &:-moz-drag-over {
-        cursor: pointer;
+    &::after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        bottom: 3px;
     }
-    &:active {cursor: move;}
+
+    & div {
+        display: flex;
+        align-items: center;
+        justify-content: baseline;
+    }
+
+    & p {
+        margin-left: 5px;
+        margin-top: 2px;
+        color: #fff;
+    }
 `
 
 export default StyledAppWindowHeading;

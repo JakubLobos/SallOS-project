@@ -8,7 +8,7 @@ interface WindowWrapperProps {
 
 const WindowWrapper = styled(DesktopBlurElement)<WindowWrapperProps>`
     
-    min-height: 480px;
+    min-height: 510px;
     min-width: 480px;
     padding: 0 10px 10px 10px;
     display: flex;
@@ -19,8 +19,7 @@ const WindowWrapper = styled(DesktopBlurElement)<WindowWrapperProps>`
     overflow: auto;
     position: absolute;
     z-index: 3;
-    top: ${props => props.ypos}px;
-    left: ${props => props.xpos}px;
+    border-radius: 28px;
 
 
     &::-webkit-resizer {
