@@ -1,13 +1,15 @@
 import { FC } from "react";
 import StyledAppWindowHeading from "./AppWindowHeading.style";
+import ControlButtons from "./controlbuttons/ControlButtons.component";
 
 interface AppWindowHeadingProps {
     getCursorPosition: React.Dispatch<React.SetStateAction<{
         x: number;
         y: number;
     }>>,
-    appName: "string",
-    appIcon: "string",
+    appName: string,
+    appIcon: string,
+    appID: number
 }
 
 const AppWindowHeading: FC<AppWindowHeadingProps> = (props) => {
@@ -30,6 +32,7 @@ const AppWindowHeading: FC<AppWindowHeadingProps> = (props) => {
                 <img alt={props.appName} src={props.appIcon} />
                 <p>{ props.appName }</p>
         </div>
+            <ControlButtons appID={props.appID}/>
         </StyledAppWindowHeading>
     )
 };

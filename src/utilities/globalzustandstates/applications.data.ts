@@ -22,10 +22,10 @@ const appsData: Array<appsDataProps> = [
     id: 0,
   },
   {
-    name: "youtube",
+    name: "calculator",
     type: "app",
-    url: "https://www.youtube.com/",
-    icon: "https://www.queeky.com/sites/default/files/images/YouTube-icon-full_color_0.png",
+    url: "https://www.desmos.com/scientific?lang=pl",
+    icon: "https://cdn2.iconfinder.com/data/icons/ios7-inspired-mac-icon-set/1024/Calculator_5122x.png",
     isPinned: false,
     isOpen: false,
     id: 1,
@@ -33,7 +33,7 @@ const appsData: Array<appsDataProps> = [
   {
     name: "folder",
     type: "catalog",
-    url: "https://www.youtube.com/",
+    url: "",
     icon: "https://www.iconpacks.net/icons/2/free-folder-icon-1484-thumb.png",
     isPinned: false,
     isOpen: false,

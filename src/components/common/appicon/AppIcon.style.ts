@@ -20,9 +20,18 @@ const StyledAppIcon = styled.button`
     }
 
     & p {
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
         font-size: 12px;
         color: #fff;
         text-shadow: 1px 2px 2px #000;
+    }
+
+    & p:hover {
+        text-overflow: none;
+        overflow: visible;
+        word-wrap: break-word;
     }
 `
 

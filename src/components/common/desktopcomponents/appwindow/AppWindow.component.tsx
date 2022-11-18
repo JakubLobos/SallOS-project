@@ -25,6 +25,7 @@ const AppWindow: FC<AppWindowProps> = (props) => {
                 getCursorPosition={setCursorPosition}
                 appIcon={props.app.icon}
                 appName={props.app.name}
+                appID={props.app.id}
 
             />
             <div className="IframeWrapper">
