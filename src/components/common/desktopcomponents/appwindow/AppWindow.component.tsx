@@ -3,6 +3,7 @@ import chromeicon from "../../../../img/static/icons/chrome.png"
 import React, { FC, PropsWithChildren, useState } from "react";
 import AppIframeContent from "./appiframecontent/AppIframeContent.component";
 import AppWindowHeading from "./appwindowheading/AppWindowHeading.component";
+import BuildInAppContent from "./buildinappcontent/BuildInAppContent.component";
 
 interface AppWindowProps {
     app?: any,
@@ -15,6 +16,19 @@ const AppWindow: FC<AppWindowProps> = (props) => {
         y: 30,
     });
 
+    const getAppType = () => {
+        if (props.app.type === "webapp") {
+            return (
+                <AppIframeContent src={props.app.url} />
+            )
+        }
+        else {
+            return (
+                <BuildInAppContent appName={props.app.name} />
+            )
+        }
+    }
+
     return (
         <WindowWrapper
             style={{
@@ -26,10 +40,11 @@ const AppWindow: FC<AppWindowProps> = (props) => {
                 appIcon={props.app.icon}
                 appName={props.app.name}
                 appID={props.app.id}
-
             />
-            <div className="IframeWrapper">
-                <AppIframeContent src={props.app.url} />
+            <div className="content_wrapper">
+            {
+                getAppType()
+            }
             </div>
         </WindowWrapper>
     )

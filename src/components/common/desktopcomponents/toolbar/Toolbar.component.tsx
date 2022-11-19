@@ -6,7 +6,7 @@ import ToolbarIcon from "./toolbaricon/ToolbarIcon.component";
 
 
 const Toolbar: FC = () => {
-    const { updateAppData, appsData } = useAppsData();
+    const { appsData } = useAppsData();
 
     return (
         <>
@@ -15,7 +15,11 @@ const Toolbar: FC = () => {
                 {
                     appsData.filter(app => app.isPinned === true)
                         .map((app) =>
-                            <ToolbarIcon key={app.id} name={app.name} icon={app.icon} />
+                            <ToolbarIcon
+                                key={app.id}
+                                name={app.name}
+                                icon={app.icon}
+                                appID={app.id} />
                         )
                 }
             </StyledToolbar>

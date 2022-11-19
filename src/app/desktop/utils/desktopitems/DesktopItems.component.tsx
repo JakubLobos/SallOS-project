@@ -5,7 +5,7 @@ import StyledDesktopItems from "./DesktopItems.style";
 
 const DesktopItems:FC = () => {
     
-    const { appsData, setAppsData, updateAppData } = useAppsData(); 
+    const { appsData } = useAppsData(); 
 
     return (
         <StyledDesktopItems>

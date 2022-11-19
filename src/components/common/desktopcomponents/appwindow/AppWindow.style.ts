@@ -32,7 +32,7 @@ const WindowWrapper = styled(DesktopBlurElement)<WindowWrapperProps>`
         width: 23px;
     }
 
-    & .IframeWrapper {
+    & .content_wrapper {
         display: flex;
         align-items: center;
         justify-content: center;

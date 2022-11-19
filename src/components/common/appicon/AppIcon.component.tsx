@@ -11,7 +11,7 @@ interface AppIconProps {
 
 const AppIcon:FC<AppIconProps> = (props) => {
 
-    const { appsData, setAppsData, updateAppData } = useAppsData(); 
+    const { appsData, updateAppData } = useAppsData(); 
 
     return (
         <StyledAppIcon onClick={() => {

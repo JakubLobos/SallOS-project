@@ -2,8 +2,8 @@ import zustand from "zustand";
 
 interface appsDataProps {
     name: string,
-    type: "app" | "catalog",
-    url: string,
+    type: "app" | "webapp" | "catalog",
+    url?: string,
     icon: string,
     isPinned: boolean,
     id: number,
@@ -11,10 +11,13 @@ interface appsDataProps {
     content?: object,
 }
 
+// If app is type of app, not webapp - rendering component is declared
+// in <BuildInAppContent /> component
+
 const appsData: Array<appsDataProps> = [
   {
     name: "chrome",
-    type: "app",
+    type: "webapp",
     url: "https://www.google.pl/?igu=1",
     icon: "https://pnggrid.com/wp-content/uploads/2021/04/Google-Chrome-Logo-2048x2048.png",
     isPinned: true,
@@ -23,7 +26,7 @@ const appsData: Array<appsDataProps> = [
   },
   {
     name: "calculator",
-    type: "app",
+    type: "webapp",
     url: "https://www.desmos.com/scientific?lang=pl",
     icon: "https://cdn2.iconfinder.com/data/icons/ios7-inspired-mac-icon-set/1024/Calculator_5122x.png",
     isPinned: false,
@@ -32,8 +35,7 @@ const appsData: Array<appsDataProps> = [
   },
   {
     name: "folder",
-    type: "catalog",
-    url: "",
+    type: "app",
     icon: "https://www.iconpacks.net/icons/2/free-folder-icon-1484-thumb.png",
     isPinned: false,
     isOpen: false,
@@ -41,6 +43,14 @@ const appsData: Array<appsDataProps> = [
     content: {
       fileTXT: 1,
     },
+  },
+  {
+    name: "Notepad",
+    type: "app",
+    icon: "https://th.bing.com/th/id/R.d2a13e8837af8f556306f2f15baa9f99?rik=lHb3ue49%2byZUlQ&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fpaomedia%2fsmall-n-flat%2f1024%2fnotepad-icon.png&ehk=AVqy7iYtmxyD2CRz2PtqdgraXYzoaUXvwxAt0%2bWjUEI%3d&risl=&pid=ImgRaw&r=0",
+    isPinned: false,
+    isOpen: false,
+    id: 3,
   },
 ]
 
