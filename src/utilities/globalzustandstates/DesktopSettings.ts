@@ -4,11 +4,13 @@ import wallpapers from "../wallpapers"
 interface DesktopDefaultSettingsProps {
     wallpaper: string,
     toolbar_size: number,
+    theme: "light" | "dark",
 }
 
 const DesktopDefaultSettings:DesktopDefaultSettingsProps = {
     wallpaper: wallpapers.mountains,
     toolbar_size: 1,
+    theme: "light",
 }
 
 interface DesktopSettings {

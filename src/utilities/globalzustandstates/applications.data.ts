@@ -1,18 +1,21 @@
 import zustand from "zustand";
 
 interface appsDataProps {
-    name: string,
-    type: "app" | "webapp" | "catalog",
+    name: string ,
+    type: "app" | "webapp" | "catalog" | "notepad" | "settings",
     url?: string,
     icon: string,
     isPinned: boolean,
     id: number,
     isOpen: boolean,
     content?: object,
+    value?: string | number,
 }
 
 // If app is type of app, not webapp - rendering component is declared
 // in <BuildInAppContent /> component
+
+
 
 const appsData: Array<appsDataProps> = [
   {
@@ -46,11 +49,21 @@ const appsData: Array<appsDataProps> = [
   },
   {
     name: "Notepad",
-    type: "app",
+    type: "notepad",
     icon: "https://th.bing.com/th/id/R.d2a13e8837af8f556306f2f15baa9f99?rik=lHb3ue49%2byZUlQ&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fpaomedia%2fsmall-n-flat%2f1024%2fnotepad-icon.png&ehk=AVqy7iYtmxyD2CRz2PtqdgraXYzoaUXvwxAt0%2bWjUEI%3d&risl=&pid=ImgRaw&r=0",
     isPinned: false,
     isOpen: false,
     id: 3,
+    value: "",
+  },
+  {
+    name: "Settings",
+    type: "settings",
+    icon: "https://th.bing.com/th/id/R.0762c1cfcce1a79c3008b0b90d6c10d2?rik=tTr8KNsJNJEmzA&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fgrafikartes%2fflat-retro-modern%2f512%2fsettings-icon.png&ehk=vNrt6BVQBgtCtxO71G23jZDYZpFCImlOe%2blbHyWdsAg%3d&risl=&pid=ImgRaw&r=0",
+    isPinned: false,
+    isOpen: false,
+    id: 4,
+    value: "",
   },
 ]
 

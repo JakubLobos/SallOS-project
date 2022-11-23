@@ -16,6 +16,9 @@ const AppWindow: FC<AppWindowProps> = (props) => {
         y: 30,
     });
 
+    //a function that checks whether the 
+    //app is built-in or is added by user 
+    //or is own of a third party website.
     const getAppType = () => {
         if (props.app.type === "webapp") {
             return (
@@ -24,7 +27,7 @@ const AppWindow: FC<AppWindowProps> = (props) => {
         }
         else {
             return (
-                <BuildInAppContent appName={props.app.name} />
+                <BuildInAppContent app={props.app} />
             )
         }
     }

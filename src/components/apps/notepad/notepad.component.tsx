@@ -1,30 +1,29 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
+import { useAppsData } from "../../../utilities/globalzustandstates/applications.data";
 import StyledNotepad from "./notepad.style";
+import NotepadButtons from "./notepadbuttons/NotepadButtons.component";
 
-const Notepad: FC = () => {
+interface NotepadProps {
+    app?: any,
+}
 
-    const [fontSize, setFontSize] = useState(() => { return (40) });
-    const [progress, setProgress]:string | any = useState();
+const Notepad: FC<NotepadProps> = (props) => {
 
-    const increaseFontSize = () => {
-        if (fontSize < 100) {
-            setFontSize(fontSize + 5)
-        }
-    }
+    const [fontSize, setFontSize] = useState(40);
+    const [progress, setProgress]: string | any = useState();
 
-    const decreaseFontSize = () => {
-        if (fontSize > 10) {
-            setFontSize(fontSize - 5)
-        }
-    }
-
+    useEffect(() => {
+        setProgress(props.app.value)
+    }, [props.app.value]);
+    
     return (
         <StyledNotepad fontsize={fontSize}>
             <textarea onChange={(e) => setProgress(e.target.value)} placeholder="type here..." value={progress}></textarea>
-            <div>
-                <button onClick={() => increaseFontSize()}>+</button>
-                <button onClick={() => decreaseFontSize()}>-</button>
-            </div>
+            <NotepadButtons
+                progress={progress}
+                setFontSize={setFontSize}
+                fontSize={fontSize}
+            />
         </StyledNotepad>
     )
 };

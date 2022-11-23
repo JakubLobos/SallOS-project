@@ -4,7 +4,9 @@ interface palleteProps {
     LoadingPageBackground?: string,
     ScrollbarColor?: string,
     mainBlurColor?: string,
-    utilsColor?: string;
+    utilsColor?: string,
+    notepadBackgroundColor?: string,
+    mainFontColor?: string,
 }
 
 const lightPallete:palleteProps = {
@@ -13,6 +15,8 @@ const lightPallete:palleteProps = {
     ScrollbarColor: "#f5f5f5",
     mainBlurColor: "#91b6b181",
     utilsColor: "#2263AE",
+    notepadBackgroundColor: "#fff",
+    mainFontColor: "#000",
 };
 
 const darkPallete:palleteProps = {
@@ -21,6 +25,8 @@ const darkPallete:palleteProps = {
     ScrollbarColor: "#f5f5f5",
     mainBlurColor: "#6d959078",
     utilsColor: "#2263AE",
+    notepadBackgroundColor: "#292828",
+    mainFontColor: "#c2c2c2",
 };
 
 export const themes = {
