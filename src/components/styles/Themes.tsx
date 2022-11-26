@@ -23,7 +23,7 @@ const darkPallete:palleteProps = {
     StartPageBackground: "#303030",
     LoadingPageBackground: "#2263AE",
     ScrollbarColor: "#f5f5f5",
-    mainBlurColor: "#6d959078",
+    mainBlurColor: "#23252578",
     utilsColor: "#2263AE",
     notepadBackgroundColor: "#292828",
     mainFontColor: "#c2c2c2",

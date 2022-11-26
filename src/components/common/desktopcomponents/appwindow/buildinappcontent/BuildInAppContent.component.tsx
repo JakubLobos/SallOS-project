@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Notepad from "../../../../apps/notepad/notepad.component";
-import Settings from "../../../../apps/settings/Settings.component";
+import Settings from "../../../../apps/settings/settingsbuttons/Settings.component";
 import StyledBuildInAppContent from "./BuildInAppContent.style";
 
 interface BuildInAppContentProps {

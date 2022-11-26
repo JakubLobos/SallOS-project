@@ -23,16 +23,7 @@ const Desktop: FC = () => {
             navigate(getAuthPage())
         }
     });
-
-    useEffect(() => {
-        setDesktopSettings({
-            wallpaper: wallpapers.mountains,
-            toolbar_size: 1,
-        })
-        console.log(desktopSettings.wallpaper)
-    }, [])
      
-
     return (
         <StyledDesktop wallpaper={desktopSettings.wallpaper}>
             <h1>Desktop, hello {sessionUser.username}</h1>

@@ -1,24 +1,24 @@
 import zustand from "zustand";
 import wallpapers from "../wallpapers"
 
-interface DesktopDefaultSettingsProps {
+interface desktopDefaultSettingsProps {
     wallpaper: string,
     toolbar_size: number,
-    theme: "light" | "dark",
+    theme: string,
 }
 
-const DesktopDefaultSettings:DesktopDefaultSettingsProps = {
+const desktopDefaultSettings: desktopDefaultSettingsProps = {
     wallpaper: wallpapers.mountains,
     toolbar_size: 1,
-    theme: "light",
-}
+    theme: "lightTheme",
+};
 
 interface DesktopSettings {
-    desktopSettings: any,
-    setDesktopSettings: (settings?: any) => void,
+    desktopSettings: desktopDefaultSettingsProps,
+    setDesktopSettings: (settings?: desktopDefaultSettingsProps) => void,
   }
   
-export const useDesktopSettings = zustand<DesktopSettings>((set: any) => ({
-    desktopSettings: DesktopDefaultSettings,
-    setDesktopSettings: (settings?: any) => set(() => ({ desktopSettings: settings }))
+export const useDesktopSettings = zustand<DesktopSettings>((set: Function) => ({
+    desktopSettings: desktopDefaultSettings,
+    setDesktopSettings: (settings?) => set(() => ({ desktopSettings: settings }))
 }));

@@ -9,12 +9,14 @@ import AuthorizePage from "../pages/authorize";
 import DesktopPage from "../pages/desktop";
 import LoadingScreenPage from "../pages/loadingscreen";
 import StartPage from "../pages/startpage";
+import { useDesktopSettings } from "../utilities/globalzustandstates/DesktopSettings";
 
 const App: FC = () => {
-    const [handleTheme, setHandleTheme] = useState<string>("lightTheme");
+    const {desktopSettings} = useDesktopSettings();
+    console.log(desktopSettings)
 
     return (
-        <ThemeProvider theme={themes[handleTheme]}>
+        <ThemeProvider theme={themes[desktopSettings.theme]}>
             <GlobalStyle />
                 <Routes>
                     <Route path={getStartPage()} element={<StartPage />} />
