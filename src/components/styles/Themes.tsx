@@ -13,7 +13,7 @@ const lightPallete:palleteProps = {
     StartPageBackground: "#303030",
     LoadingPageBackground: "#2263AE",
     ScrollbarColor: "#f5f5f5",
-    mainBlurColor: "#91b6b181",
+    mainBlurColor: "#a1acaa5c",
     utilsColor: "#2263AE",
     notepadBackgroundColor: "#fff",
     mainFontColor: "#000",

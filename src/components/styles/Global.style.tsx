@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps & {theme: any}>`
         font-family: 'Signika Negative';
     }
 
+
     body {
         display: flex;
         width: 100%;

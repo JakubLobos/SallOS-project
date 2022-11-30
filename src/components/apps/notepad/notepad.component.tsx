@@ -1,5 +1,4 @@
 import { FC, useEffect, useState } from "react";
-import { useAppsData } from "../../../utilities/globalzustandstates/applications.data";
 import StyledNotepad from "./notepad.style";
 import NotepadButtons from "./notepadbuttons/NotepadButtons.component";
 

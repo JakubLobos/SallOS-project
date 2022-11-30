@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Notepad from "../../../../apps/notepad/notepad.component";
 import Settings from "../../../../apps/settings/settingsbuttons/Settings.component";
+import Wallpapers from "../../../../apps/wallpapers/WallpapersApp.component";
 import StyledBuildInAppContent from "./BuildInAppContent.style";
 
 interface BuildInAppContentProps {
@@ -19,6 +20,9 @@ const BuildInAppContent: FC<BuildInAppContentProps> = (props) => {
             
             case "settings":
                 return <Settings />
+            
+                case "wallpapers":
+                    return <Wallpapers />
         }
     }
 

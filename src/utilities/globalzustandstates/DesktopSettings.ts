@@ -8,7 +8,7 @@ interface desktopDefaultSettingsProps {
 }
 
 const desktopDefaultSettings: desktopDefaultSettingsProps = {
-    wallpaper: wallpapers.mountains,
+    wallpaper: wallpapers[0].src, // 0 = default
     toolbar_size: 1,
     theme: "lightTheme",
 };

@@ -8,6 +8,7 @@ const StyledAppWindowHeading = styled.header`
     user-select: select;
     position: relative;
 
+
     &::after {
         display: block;
         content: '';

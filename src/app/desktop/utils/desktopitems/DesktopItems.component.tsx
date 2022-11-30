@@ -10,7 +10,7 @@ const DesktopItems:FC = () => {
     return (
         <StyledDesktopItems>
             {
-                appsData.map(app => <AppIcon
+                appsData.filter(app => app.isHidden === false).map(app => <AppIcon
                     appIMG={app.icon}
                     key={app.id}
                     appName={app.name}

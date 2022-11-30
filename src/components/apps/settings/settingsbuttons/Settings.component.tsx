@@ -6,7 +6,6 @@ const Settings: FC = () => {
     
     return (
         <StyledSettings>
-            <p>Say hello to settings component!</p>
             <SettingsButtons />
         </StyledSettings>
     )

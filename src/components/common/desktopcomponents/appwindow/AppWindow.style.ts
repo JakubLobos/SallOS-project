@@ -16,7 +16,7 @@ const WindowWrapper = styled(DesktopBlurElement)<WindowWrapperProps>`
     justify-content: center;
     flex-direction: column;
     resize: both;
-    overflow: hidden;
+    overflow-x: hidden;
     position: absolute;
     border-radius: 28px;
 
