@@ -9,6 +9,7 @@ interface appsDataProps {
     id: number,
     isOpen: boolean,
     isHidden: boolean,
+    isFocused: boolean,
     content?: object,
     value?: string | number,
 }
@@ -27,6 +28,7 @@ const appsData: Array<appsDataProps> = [
     isPinned: true,
     isOpen: false,
     isHidden: false,
+    isFocused: false,
     id: 0,
   },
   {
@@ -37,6 +39,7 @@ const appsData: Array<appsDataProps> = [
     isPinned: false,
     isOpen: false,
     isHidden: false,
+    isFocused: false,
     id: 1,
   },
   {
@@ -46,6 +49,7 @@ const appsData: Array<appsDataProps> = [
     isPinned: false,
     isOpen: false,
     isHidden: false,
+    isFocused: false,
     id: 2,
     content: {
       fileTXT: 1,
@@ -58,6 +62,7 @@ const appsData: Array<appsDataProps> = [
     isPinned: false,
     isOpen: false,
     isHidden: false,
+    isFocused: false,
     id: 3,
     value: "",
   },
@@ -68,6 +73,7 @@ const appsData: Array<appsDataProps> = [
     isPinned: false,
     isOpen: false,
     isHidden: false,
+    isFocused: false,
     id: 4,
   },
   {
@@ -77,7 +83,19 @@ const appsData: Array<appsDataProps> = [
     isPinned: false,
     isOpen: false,
     isHidden: true,
-    id: 5, //used id in SettingsButtons Component!
+    isFocused: false,
+    id: 5, //used id in SettingsButtons Component, don't change this id, if you don't know whats you doing!
+  },
+  {
+    name: "Readme.ntpd",
+    type: "notepad",
+    icon: "https://th.bing.com/th/id/R.d2a13e8837af8f556306f2f15baa9f99?rik=lHb3ue49%2byZUlQ&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fpaomedia%2fsmall-n-flat%2f1024%2fnotepad-icon.png&ehk=AVqy7iYtmxyD2CRz2PtqdgraXYzoaUXvwxAt0%2bWjUEI%3d&risl=&pid=ImgRaw&r=0",
+    isPinned: false,
+    isOpen: false,
+    isHidden: false,
+    isFocused: false,
+    id: 6,
+    value: "Welcome in SallOS! Useful features: Click on opened app to focus it, and make it more accesible than other opened apps, use console to add your own apps, and don't forget to customize your desktop by Settings app. ",
   },
 ]
 

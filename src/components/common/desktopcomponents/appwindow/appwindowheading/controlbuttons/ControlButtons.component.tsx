@@ -12,12 +12,12 @@ const ControlButtons:FC<ControlButtonsProps> = (props) => {
     
     const { appsData, updateAppData } = useAppsData();
 
-    function abortApp() {
+    const abortApp = () => {
         updateAppData({
             ...appsData[props.appID],
             isOpen: false,
         }, props.appID);
-        console.log(appsData);
+        console.log("aborting app");
     };
 
     return (

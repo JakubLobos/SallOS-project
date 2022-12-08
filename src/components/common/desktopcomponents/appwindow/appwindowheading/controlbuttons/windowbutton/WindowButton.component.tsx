@@ -14,7 +14,7 @@ const WindowButton: FC<WindowButtonProps> = (props) => {
     }
 
     return (
-        <StyledWindowButton onClick={buttonService()}>
+        <StyledWindowButton onMouseUp={buttonService()}>
             <img alt={ props.name + " button icon"} src={props.IMG} />
         </StyledWindowButton>
     )

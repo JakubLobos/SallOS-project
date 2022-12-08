@@ -9,7 +9,7 @@ interface NotepadProps {
 const Notepad: FC<NotepadProps> = (props) => {
 
     const [fontSize, setFontSize] = useState(40);
-    const [progress, setProgress]: string | any = useState();
+    const [progress, setProgress] = useState<string>("");
 
     useEffect(() => {
         setProgress(props.app.value)

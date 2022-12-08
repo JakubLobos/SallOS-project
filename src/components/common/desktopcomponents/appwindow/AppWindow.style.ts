@@ -4,6 +4,7 @@ import DesktopBlurElement from "../desktopblurelement/DesktopBlurElement.style";
 interface WindowWrapperProps {
     ypos?: number;
     xpos?: number;
+    focused: boolean;
 }
 
 const WindowWrapper = styled(DesktopBlurElement)<WindowWrapperProps>`
@@ -13,6 +14,7 @@ const WindowWrapper = styled(DesktopBlurElement)<WindowWrapperProps>`
     padding: 0 10px 10px 10px;
     display: flex;
     align-items: center;
+    z-index: ${props => props.focused ? "100" : "1"};
     justify-content: center;
     flex-direction: column;
     resize: both;
