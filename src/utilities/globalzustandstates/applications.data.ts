@@ -1,6 +1,6 @@
 import zustand from "zustand";
 
-interface appsDataProps {
+export interface appsDataProps {
     name: string ,
     type: string,
     url?: string,

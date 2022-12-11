@@ -1,28 +1,28 @@
 import { FC, useEffect } from "react";
-import { useAppsData } from "../../../utilities/globalzustandstates/applications.data";
+import { appsDataProps, useAppsData } from "../../../utilities/globalzustandstates/applications.data";
+import { verifyLastestApp } from "../../../utilities/lastest";
 import AppWindow from "../desktopcomponents/appwindow/AppWindow.component";
 import StyledAppIcon from "./AppIcon.style";
 
 interface AppIconProps {
-    appName: string;
-    appIMG: string;
-    appID: number;
+    app: appsDataProps,
 }
 
-const AppIcon:FC<AppIconProps> = (props) => {
+const AppIcon: FC<AppIconProps> = (props) => {
 
     const { appsData, updateAppData } = useAppsData(); 
 
     return (
         <StyledAppIcon onClick={() => {
             updateAppData({
-                ...appsData[props.appID],
+                ...appsData[props.app.id],
                 isOpen: true,
-            }, props.appID);
+            }, props.app.id);
             console.log(appsData)
+            verifyLastestApp(props.app);
         }}>
-            <img src={props.appIMG} alt={"desktop icon of " + props.appName}/>
-            <p>{props.appName}</p>
+            <img src={props.app.icon} alt={"desktop icon of " + props.app.name}/>
+            <p>{props.app.name}</p>
         </StyledAppIcon>
     )
 }
