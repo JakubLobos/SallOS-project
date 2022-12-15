@@ -8,12 +8,14 @@ interface StyledMenuProps {
 const StyledMenu = styled(DesktopBlurElement)<StyledMenuProps>`
     width: 326px;
     height: 572px;
+    padding: 10px;
     position: absolute;
     top: -577px;
     left: 10px;
     border-radius: 26px;
     animation: showUp .4s linear;
     display: ${props => props.isOpen ? "flex" : "none"};
+    flex-direction: column;
 
     @keyframes showUp {
         100% {

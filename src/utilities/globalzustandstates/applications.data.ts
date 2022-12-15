@@ -12,6 +12,7 @@ export interface appsDataProps {
     isFocused: boolean,
     content?: object,
     value?: string | number,
+    usage?: "tool" | "social",
 }
 
 // If app is type of app, not webapp - rendering component is declared
@@ -41,6 +42,7 @@ const appsData: Array<appsDataProps> = [
     isHidden: false,
     isFocused: false,
     id: 1,
+    usage: "tool",
   },
   {
     name: "folder",
@@ -74,6 +76,7 @@ const appsData: Array<appsDataProps> = [
     isOpen: false,
     isHidden: false,
     isFocused: false,
+    usage: "tool",
     id: 4,
   },
   {
@@ -84,6 +87,7 @@ const appsData: Array<appsDataProps> = [
     isOpen: false,
     isHidden: true,
     isFocused: false,
+    usage: "tool",
     id: 5, //used id in SettingsButtons Component, don't change this id, if you don't know whats you doing!
   },
   {
@@ -96,6 +100,17 @@ const appsData: Array<appsDataProps> = [
     isFocused: false,
     id: 6,
     value: "Welcome in SallOS! Useful features: Click on opened app to focus it, and make it more accesible than other opened apps, use console to add your own apps, and don't forget to customize your desktop by Settings app. ",
+  },
+  {
+    name: "Console",
+    type: "console",
+    icon: "https://simplecodetips.com/wp-content/uploads/2017/01/Linux-Terminal-icon.png",
+    isPinned: false,
+    isOpen: false,
+    isHidden: false,
+    isFocused: false,
+    usage: "tool",
+    id: 7,
   },
 ]
 
