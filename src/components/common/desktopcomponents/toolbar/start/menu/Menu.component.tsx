@@ -1,5 +1,6 @@
 import { FC } from "react";
 import CategoryHeading from "../../../../categoryheading/CategoryHeading.component";
+import AuthorSection from "./author/AuthorSection.component";
 import ControlSection from "./controlsection/ControlSection.component";
 import LastestLaunch from "./lastest/Lastest.component";
 import StyledMenu from "./Menu.style";
@@ -15,6 +16,7 @@ const Menu:FC<MenuProps> = (props) => {
         <StyledMenu isOpen={props.handleMenuDisplay}>
             <LastestLaunch />
             <Tools />
+            <AuthorSection />
             <ControlSection />
         </StyledMenu>
     )

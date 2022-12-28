@@ -20,7 +20,7 @@ export interface appsDataProps {
 
 
 
-const appsData: Array<appsDataProps> = [
+export const appsData: Array<appsDataProps> = [
   {
     name: "chrome",
     type: "webapp",
@@ -112,6 +112,39 @@ const appsData: Array<appsDataProps> = [
     usage: "tool",
     id: 7,
   },
+  {
+    name: "User",
+    type: "myprofile",
+    icon: "https://cdn-icons-png.flaticon.com/512/561/561845.png",
+    isPinned: false,
+    isOpen: false,
+    isHidden: true,
+    isFocused: false,
+    usage: "social",
+    id: 8, //hard-coded in 
+  },
+  {
+    name: "console documentation.ntpd",
+    type: "notepad",
+    icon: "https://th.bing.com/th/id/R.d2a13e8837af8f556306f2f15baa9f99?rik=lHb3ue49%2byZUlQ&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fpaomedia%2fsmall-n-flat%2f1024%2fnotepad-icon.png&ehk=AVqy7iYtmxyD2CRz2PtqdgraXYzoaUXvwxAt0%2bWjUEI%3d&risl=&pid=ImgRaw&r=0",
+    isPinned: false,
+    isOpen: false,
+    isHidden: true,
+    isFocused: false,
+    id: 9, //hard-coded in Console.service.ts
+    value: "Console usage (docs): \n\n1) change console color: color (color)\nExample: color red \n\n2) Ask console to log your text: \nsay (your text)\nExample: say hello world! \n\n3) install new wallpaper: \ninstall wallpaper (source - url) (name)\nExample: install wallpaper https://th.bing.com/th/id/R.f47f9400544edc84c693809a6907ed76?rik=8NJhYhyiMqjHkw&riu=http%3a%2f%2fpavbca.com%2fwalldb%2foriginal%2f4%2fa%2fe%2f723576.jpg&ehk=tiVVpGcIOmWT%2ft5L0%2bQsTGyP%2bgb20rFMb2E0ufHmBNw%3d&risl=&pid=ImgRaw&r=0 secretwallpaper \n\n4) clear console\nclear\nExample: clear \n\n5) Install new app\ninstall app (source - only website url) (name)\nExample: install app https://www.calculator.com/ calculator"
+  },
+  {
+    name: "Iconpainter",
+    type: "iconcustomization",
+    icon: "https://th.bing.com/th/id/R.191b03470fff24ff741908ef57ef92ed?rik=btBo2XLt40eMzA&riu=http%3a%2f%2fwww.xlmsolutions.com%2fwp-content%2fuploads%2f2017%2f06%2fcustomization.png&ehk=XEWCadJpytoeSjGvWPCVXPqoBSepkRN%2fVUuWoKN1ieA%3d&risl=&pid=ImgRaw&r=0",
+    isPinned: false,
+    isOpen: false,
+    isHidden: false,
+    isFocused: false,
+    usage: "tool",
+    id: 10, //used id in SettingsButtons Component, don't change this id, if you don't know whats you doing!
+  },
 ]
 
 interface useAppsDataZustand {
@@ -136,7 +169,7 @@ export const useAppsData = zustand<useAppsDataZustand>((set: any) => ({
 	setAppsData: (data?: any[]) => set(() => ({ appsData: data}))
 }));
 
-// i know its not the best way to make it.
+// its not the best way to make it.
 
 /* useEffect(() => {
   updateAppData({

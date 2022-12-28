@@ -7,6 +7,7 @@ interface palleteProps {
     utilsColor?: string,
     notepadBackgroundColor?: string,
     mainFontColor?: string,
+    userIconColor?: string,
 }
 
 const lightPallete:palleteProps = {
@@ -24,7 +25,7 @@ const darkPallete:palleteProps = {
     LoadingPageBackground: "#2263AE",
     ScrollbarColor: "#f5f5f5",
     mainBlurColor: "#23252578",
-    utilsColor: "#2263AE",
+    utilsColor: "#102f53",
     notepadBackgroundColor: "#292828",
     mainFontColor: "#c2c2c2",
 };

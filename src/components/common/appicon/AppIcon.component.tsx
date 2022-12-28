@@ -1,7 +1,7 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import { appsDataProps, useAppsData } from "../../../utilities/globalzustandstates/applications.data";
+import { useDesktopSettings } from "../../../utilities/globalzustandstates/DesktopSettings";
 import { verifyLastestApp } from "../../../utilities/lastest";
-import AppWindow from "../desktopcomponents/appwindow/AppWindow.component";
 import StyledAppIcon from "./AppIcon.style";
 
 interface AppIconProps {
@@ -11,9 +11,21 @@ interface AppIconProps {
 const AppIcon: FC<AppIconProps> = (props) => {
 
     const { appsData, updateAppData } = useAppsData(); 
+    const { setDesktopSettings, desktopSettings } = useDesktopSettings();
 
     return (
-        <StyledAppIcon onClick={() => {
+        <StyledAppIcon onContextMenu={e => {
+            e.preventDefault();
+            setDesktopSettings({
+                ...desktopSettings,
+                AppPropertiesMenuShown: {
+                    ...desktopSettings.AppPropertiesMenuShown,
+                    appSelected: props.app,
+                    isHidden: desktopSettings.AppPropertiesMenuShown.isHidden ? false : true,
+                    xpos: e.clientX - 5,
+                    ypos: e.clientY - 5,
+                },})
+        }} onClick={() => {
             updateAppData({
                 ...appsData[props.app.id],
                 isOpen: true,

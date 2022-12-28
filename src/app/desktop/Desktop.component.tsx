@@ -11,22 +11,35 @@ import ToolbarContainer from "./utils/toolbarcontainer/ToolbarContainer.style";
 import AppWindow from "../../components/common/desktopcomponents/appwindow/AppWindow.component";
 import DesktopItems from "./utils/desktopitems/DesktopItems.component";
 import { useAppsData } from "../../utilities/globalzustandstates/applications.data";
+import Clock from "../../components/common/desktopcomponents/clock/Clock.component";
+import PopUp from "../../components/common/desktopcomponents/popup/PopUp.component";
+import AppPropertiesMenu from "./utils/apppropertiesmenu/AppPropertiesMenu.component";
 
 const Desktop: FC = () => {
     const navigate = useNavigate()
     const { sessionUser } = useSession();
     const { desktopSettings, setDesktopSettings } = useDesktopSettings()
-    const { appsData, setAppsData, updateAppData } = useAppsData();
+    const { appsData } = useAppsData();
 
     useEffect(() => {
         if (Object.keys(sessionUser).length === 0) {
             navigate(getAuthPage())
         }
     });
+
+    const clearOpenedSysMenu:Function = () => {
+        setDesktopSettings({ //clearing properties menu, when right-click on app
+            ...desktopSettings,
+            AppPropertiesMenuShown: {
+                ...desktopSettings.AppPropertiesMenuShown,
+                isHidden: true,
+            },})
+    }
      
     return (
-        <StyledDesktop wallpaper={desktopSettings.wallpaper}>
-            <h1>Desktop, hello {sessionUser.username}</h1>
+        <StyledDesktop onMouseUp={() => clearOpenedSysMenu()} wallpaper={desktopSettings.wallpaper}>
+            <PopUp />
+            <AppPropertiesMenu />
             <>
                 {
                     appsData.filter(app => app.isOpen === true).map(app => {
@@ -40,6 +53,7 @@ const Desktop: FC = () => {
             <DesktopItems />
             <ToolbarContainer>
                 <Toolbar />
+                <Clock />
             </ToolbarContainer>
         </StyledDesktop>
     )

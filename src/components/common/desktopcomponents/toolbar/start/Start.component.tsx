@@ -13,7 +13,7 @@ const Start:FC = () => {
             <Menu handleMenuDisplay={isMenuOpen} />
             <StartButton onClick={() => setIsMenuOpen(isMenuOpen ? false : true)}>
                 <img
-                    alt="button dots"
+                    alt="menu button dots"
                     src={ButtonDots} />
             </StartButton>
         </StyledStart>

@@ -1,6 +1,5 @@
 import WindowWrapper from "./AppWindow.style";
-import chromeicon from "../../../../img/static/icons/chrome.png"
-import React, { FC, PropsWithChildren, useState } from "react";
+import { FC, useState } from "react";
 import AppIframeContent from "./appiframecontent/AppIframeContent.component";
 import AppWindowHeading from "./appwindowheading/AppWindowHeading.component";
 import BuildInAppContent from "./buildinappcontent/BuildInAppContent.component";
@@ -38,7 +37,8 @@ const AppWindow: FC<AppWindowProps> = (props) => {
     return (
         <WindowWrapper
             onClick={() => {
-                appsData.filter(app => app.isFocused === true).map(app => {
+                appsData.filter(app => app.isFocused === true)
+                    .map(app => {
                     updateAppData({
                         ...appsData[app.id],
                         isFocused: false,

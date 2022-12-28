@@ -1,5 +1,6 @@
 import { FC, useState } from "react";
 import { useAppsData } from "../../../../utilities/globalzustandstates/applications.data";
+import { usePopUpSettings } from "../../../../utilities/globalzustandstates/popup";
 import NotepadButtonsWrapper from "./NotepadButtons.style";
 
 interface NotepadButtonsProps {
@@ -10,9 +11,10 @@ interface NotepadButtonsProps {
 
 const NotepadButtons: FC<NotepadButtonsProps> = (props) => {
 
-    const {appsData} = useAppsData()
-    const [newFileName, setNewFileName]:string | any = useState("")
-    const [popupIsVisible, setPopupIsVisible] = useState(false)
+    const { popUpSettings, setpopUpSettings } = usePopUpSettings();
+    const { appsData } = useAppsData();
+    const [newFileName, setNewFileName]: string | any = useState("");
+    const [popupIsVisible, setPopupIsVisible] = useState(false);
 
     const increaseFontSize = () => {
         if (props.fontSize < 100) {
@@ -39,6 +41,22 @@ const NotepadButtons: FC<NotepadButtonsProps> = (props) => {
             isHidden: false,
         })
         console.log(appsData);
+
+        if (popUpSettings.isHidden === true) {
+            setpopUpSettings({
+                ...popUpSettings,
+                isHidden: popUpSettings.isHidden ? false : true,
+                heading: "Saved!",
+                value: newFileName === "" ? "saved as default" : "saved as " + newFileName,
+            });
+    
+            setTimeout(() => {
+                setpopUpSettings({
+                    ...popUpSettings,
+                    isHidden: true,
+                });
+            }, popUpSettings.popUpTime)
+        }
     };
 
     return (
