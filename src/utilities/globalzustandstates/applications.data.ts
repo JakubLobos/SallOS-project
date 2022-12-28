@@ -140,7 +140,7 @@ export const appsData: Array<appsDataProps> = [
     icon: "https://th.bing.com/th/id/R.191b03470fff24ff741908ef57ef92ed?rik=btBo2XLt40eMzA&riu=http%3a%2f%2fwww.xlmsolutions.com%2fwp-content%2fuploads%2f2017%2f06%2fcustomization.png&ehk=XEWCadJpytoeSjGvWPCVXPqoBSepkRN%2fVUuWoKN1ieA%3d&risl=&pid=ImgRaw&r=0",
     isPinned: false,
     isOpen: false,
-    isHidden: false,
+    isHidden: true,
     isFocused: false,
     usage: "tool",
     id: 10, //used id in SettingsButtons Component, don't change this id, if you don't know whats you doing!
