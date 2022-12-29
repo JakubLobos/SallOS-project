@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { Routes, Route } from "react-router-dom"
 import { ThemeProvider } from "styled-components";
 import { getAuthPage, getDesktopPage, getLoadingPageLink, getStartPage } from "../components/service/Links.service";
