@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/SallOS-project/static/js/main.d8e6c5de.js",
+    "main.js": "/SallOS-project/static/js/main.60aa81ed.js",
     "static/js/787.2498a799.chunk.js": "/SallOS-project/static/js/787.2498a799.chunk.js",
     "static/media/forest.jpg": "/SallOS-project/static/media/forest.c9670f8894ac387443ac.jpg",
     "static/media/mountains.jpg": "/SallOS-project/static/media/mountains.448c1e246989708d062d.jpg",
@@ -10,10 +10,10 @@
     "static/media/user.png": "/SallOS-project/static/media/user.585a134a61f4fa49088a.png",
     "static/media/dots.svg": "/SallOS-project/static/media/dots.d7bcb0ac39eb15875559dc475ac4f627.svg",
     "index.html": "/SallOS-project/index.html",
-    "main.d8e6c5de.js.map": "/SallOS-project/static/js/main.d8e6c5de.js.map",
+    "main.60aa81ed.js.map": "/SallOS-project/static/js/main.60aa81ed.js.map",
     "787.2498a799.chunk.js.map": "/SallOS-project/static/js/787.2498a799.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.d8e6c5de.js"
+    "static/js/main.60aa81ed.js"
   ]
 }
