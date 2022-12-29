@@ -1,5 +1,4 @@
 {
-  "homepage": "https://JakubLobos.github.io/SallOS-project/",
   "deploy":"gh-pages -d build -r https://github.com/jakublobos/SallOS-project",
   "name": "sallos",
   "version": "0.1.0",
