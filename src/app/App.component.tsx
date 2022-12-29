@@ -23,7 +23,7 @@ const App: FC = () => {
                     <Route path={getLoadingPageLink()} element={<LoadingScreenPage />} />
                     <Route path={getAuthPage()} element={<AuthorizePage />} />
                     <Route path={getDesktopPage()} element={<DesktopPage />} />    
-                    <Route path="*" element={<h1>Page not found!</h1>} />
+                    <Route path="*" element={<h1>Page not found!!</h1>} />
                 </Routes>
         </ThemeProvider>
     );
