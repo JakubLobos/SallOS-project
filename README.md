@@ -1,6 +1,6 @@
 
   <h2 align="center">SallOS</h2>
-  <p align="center">The project was made by me. Includes an operating system simulator.</p>
+  <p align="center">The project was made by me. Includes an operating system simulator.The project is based on React, React-Router, Typescript, Styled-Components, Zustand, RestAPI, Axios</p>
   
   <details>
     <summary>Content</summary>
