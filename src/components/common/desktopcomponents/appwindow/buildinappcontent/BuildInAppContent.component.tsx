@@ -7,6 +7,7 @@ import StyledBuildInAppContent from "./BuildInAppContent.style";
 import Console from "../../../../apps/console/Console.component";
 import MyProfile from "../../../../apps/myprofile/MyProfile.component";
 import IconCustomization from "../../../../apps/iconcustomization/IconCustomization.component";
+import Folder from "../../../../apps/folder/Folder.component";
 
 interface BuildInAppContentProps {
     app?: any,
@@ -36,6 +37,9 @@ const BuildInAppContent: FC<BuildInAppContentProps> = (props) => {
             
             case "iconcustomization":
                 return <IconCustomization />
+            
+            case "folder":
+                return <Folder />
         }
     }
 
