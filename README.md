@@ -1,46 +1,45 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h2 align="center">SallOS</h2>
+  <p align="center">The project was made by me. Includes an operating system simulator.</p>
+  
+  <details>
+    <summary>Content</summary>
+    <ol>
+      <li>
+        <a href="#instructions">Installation Instructions</a>
+      </li>
+      <li><a href="#usage">Usage Information</a></li>
+      <li><a href="#contributing">Contribution Guidelines</a></li>
+      <li><a href="#features">Features list</a></li>
+      <li><a href="#questions">Questions, and contact</a></li>
+    </ol>
+  </details>
+  
+  <h3 id="instructions">Instructions</h3>
+  <hr>
+  <p>To Install: clone the repo and save into your new repository. Once installed, run the index.js file in node to get started.</p>
+  
+  <h3 id="contributing">Contribution Guidelines</h3>
+  <hr>
+  <p>If you have a suggestion that would make this better, please fork the repo, create your feature branch, commit your change, push to the branch, and open a pull request.</p>
+  
+  <h3 id="features">Features information</h3>
+  <hr>
+  <ul>
+    <li>Use the Settings app to customize your desktop to your preferences. You can change, for example, the theme, wallpaper, or the color of your user icon!</li>
+    <li>Use the built-in browser to browse the web. Not all sites are supported!</li>
+    <li>Use your console to install your own app or wallpaper! You can also play with other commands. The list can be found under the command "get doc" The console is very useful :).</li>
+    <li>By clicking on the arrow next to the clock you will get more information about today.</li>
+    <li>Click on the application and open its content. You can expand and drag the application window through the top panel, as you do on most OS.</li>
+    <li>Right-click on the app to pin it to the toolbar or hide it from the desktop.</li>
+    <li>Note that the applications you open appear in the history of open applications. The list is located when you open the menu next to the toolbar.</li>
+  </ul>
+  
+  <h3 id="license">License</h3>
+  <hr>
+  <p>This project is covered under the ISC license.</p>
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+  
+  <h3 id="questions">Questions?</h3>
+  <hr>
+  <p>Project is part of my portfolio, if you are interested in me please contact me at: <a href="mailto:saltver2@onet.eu">saltver2@onet.eu</a> or <a href="mailto:JakubLobos@webrance.com">JakubLobos@webrance.com</a></p>
