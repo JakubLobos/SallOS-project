@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.9a4906ac.js",
+    "main.js": "/static/js/main.772b2989.js",
     "static/js/787.2498a799.chunk.js": "/static/js/787.2498a799.chunk.js",
     "static/media/forest.jpg": "/static/media/forest.c9670f8894ac387443ac.jpg",
     "static/media/mountains.jpg": "/static/media/mountains.448c1e246989708d062d.jpg",
@@ -10,10 +10,10 @@
     "static/media/user.png": "/static/media/user.585a134a61f4fa49088a.png",
     "static/media/dots.svg": "/static/media/dots.d7bcb0ac39eb15875559dc475ac4f627.svg",
     "index.html": "/index.html",
-    "main.9a4906ac.js.map": "/static/js/main.9a4906ac.js.map",
+    "main.772b2989.js.map": "/static/js/main.772b2989.js.map",
     "787.2498a799.chunk.js.map": "/static/js/787.2498a799.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.9a4906ac.js"
+    "static/js/main.772b2989.js"
   ]
 }
