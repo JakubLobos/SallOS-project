@@ -37,7 +37,9 @@ const Desktop: FC = () => {
     }
      
     return (
-        <StyledDesktop onMouseUp={() => clearOpenedSysMenu()} wallpaper={desktopSettings.wallpaper}>
+        <StyledDesktop
+            onMouseUp={() => clearOpenedSysMenu()}
+            wallpaper={desktopSettings.wallpaper}>
             <PopUp />
             <AppPropertiesMenu />
             <>

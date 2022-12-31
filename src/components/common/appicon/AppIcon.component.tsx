@@ -29,6 +29,7 @@ const AppIcon: FC<AppIconProps> = (props) => {
             updateAppData({
                 ...appsData[props.app.id],
                 isOpen: true,
+                isMinimized: false,
             }, props.app.id);
             console.log(appsData)
             verifyLastestApp(props.app);

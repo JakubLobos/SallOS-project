@@ -10,8 +10,8 @@ const StyledWindowButton = styled.button`
     transition: .2s;
     padding: 1px;
     cursor: pointer;
-    position: absolute;
     z-index: 122;
+    margin: 4px;
 
     &:hover { background-color: rgb(211, 17, 34); }
     &:active { scale: 1.1; }

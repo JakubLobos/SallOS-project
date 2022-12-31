@@ -13,13 +13,15 @@ const Toolbar: FC = () => {
             <Start />
             <StyledToolbar>
                 {
-                    appsData.filter(app => app.isPinned === true)
+                    appsData.filter(app => app.isPinned === true || app.isMinimized === true || app.isOpen)
                         .map((app) =>
                             <ToolbarIcon
                                 key={app.id}
                                 name={app.name}
                                 icon={app.icon}
-                                appID={app.id} />
+                                appID={app.id}
+                                isOpen={app.isOpen}
+                                isMinimized={app.isMinimized} />
                         )
                 }
             </StyledToolbar>

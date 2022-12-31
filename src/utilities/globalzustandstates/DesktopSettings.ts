@@ -30,6 +30,7 @@ const desktopDefaultSettings: desktopDefaultSettingsProps = {
             isOpen: false,
             isHidden: false,
             isFocused: false,
+            isMinimized: false,
             id: 0,
           },
         isHidden: true,

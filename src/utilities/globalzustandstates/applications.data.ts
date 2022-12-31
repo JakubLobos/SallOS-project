@@ -6,6 +6,7 @@ export interface appsDataProps {
     url?: string,
     icon: string,
     isPinned: boolean,
+    isMinimized: boolean,
     id: number,
     isOpen: boolean,
     isHidden: boolean,
@@ -30,6 +31,7 @@ export const appsData: Array<appsDataProps> = [
     isOpen: false,
     isHidden: false,
     isFocused: false,
+    isMinimized: false,
     id: 0,
   },
   {
@@ -41,6 +43,7 @@ export const appsData: Array<appsDataProps> = [
     isOpen: false,
     isHidden: false,
     isFocused: false,
+    isMinimized: false,
     id: 1,
     usage: "tool",
   },
@@ -52,6 +55,7 @@ export const appsData: Array<appsDataProps> = [
     isOpen: false,
     isHidden: false,
     isFocused: false,
+    isMinimized: false,
     id: 2,
     content: {
       fileTXT: 1,
@@ -65,6 +69,7 @@ export const appsData: Array<appsDataProps> = [
     isOpen: false,
     isHidden: false,
     isFocused: false,
+    isMinimized: false,
     id: 3,
     value: "",
   },
@@ -76,6 +81,7 @@ export const appsData: Array<appsDataProps> = [
     isOpen: false,
     isHidden: false,
     isFocused: false,
+    isMinimized: false,
     id: 4,
     value: "Welcome in SallOS! \nUseful features: \n\n- Click on opened app to focus it, and make it more accesible than other opened apps!\n\n- Use console to add your own apps, and wallpapers, and don't forget to customize your desktop by Settings app. \n\n- You can save notepad file on desktop. Use save button below!\n\n- Right-click on app to pin, or hide from desktop.\n\n- You can click on the arrow next to the clock to see more information about today",
   },
@@ -87,6 +93,7 @@ export const appsData: Array<appsDataProps> = [
     isOpen: false,
     isHidden: true,
     isFocused: false,
+    isMinimized: false,
     usage: "tool",
     id: 5, //used id in SettingsButtons Component, don't change this id, if you don't know whats you doing!
   },
@@ -98,6 +105,7 @@ export const appsData: Array<appsDataProps> = [
     isOpen: false,
     isHidden: false,
     isFocused: false,
+    isMinimized: false,
     usage: "tool",
     id: 6,
   },
@@ -109,6 +117,7 @@ export const appsData: Array<appsDataProps> = [
     isOpen: false,
     isHidden: false,
     isFocused: false,
+    isMinimized: false,
     usage: "tool",
     id: 7,
   },
@@ -120,6 +129,7 @@ export const appsData: Array<appsDataProps> = [
     isOpen: false,
     isHidden: true,
     isFocused: false,
+    isMinimized: false,
     usage: "social",
     id: 8, //hard-coded in 
   },
@@ -131,6 +141,7 @@ export const appsData: Array<appsDataProps> = [
     isOpen: false,
     isHidden: true,
     isFocused: false,
+    isMinimized: false,
     id: 9, //hard-coded in Console.service.ts
     value: "Console usage (docs): \n\n1) change console color: color (color)\nExample: color red \n\n2) Ask console to log your text: \nsay (your text)\nExample: say hello world! \n\n3) install new wallpaper: \ninstall wallpaper (source - url) (name)\nExample: install wallpaper https://th.bing.com/th/id/R.f47f9400544edc84c693809a6907ed76?rik=8NJhYhyiMqjHkw&riu=http%3a%2f%2fpavbca.com%2fwalldb%2foriginal%2f4%2fa%2fe%2f723576.jpg&ehk=tiVVpGcIOmWT%2ft5L0%2bQsTGyP%2bgb20rFMb2E0ufHmBNw%3d&risl=&pid=ImgRaw&r=0 secretwallpaper \n\n4) clear console\nclear\nExample: clear \n\n5) Install new app\ninstall app (source - only website url) (name)\nExample: install app https://www.calculator.com/ calculator"
   },
@@ -142,6 +153,7 @@ export const appsData: Array<appsDataProps> = [
     isOpen: false,
     isHidden: true,
     isFocused: false,
+    isMinimized: false,
     usage: "tool",
     id: 10, //used id in SettingsButtons Component, don't change this id, if you don't know whats you doing!
   },

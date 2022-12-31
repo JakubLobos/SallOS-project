@@ -6,6 +6,8 @@ interface ToolbarIconProps {
     name: string,
     icon: any,
     appID: number,
+    isOpen: boolean,
+    isMinimized: boolean,
 }
 
 const ToolbarIcon: FC<ToolbarIconProps> = (props) => {
@@ -13,10 +15,14 @@ const ToolbarIcon: FC<ToolbarIconProps> = (props) => {
     const {updateAppData, appsData} = useAppsData()
 
     return (
-        <StyledToolbarIcon onClick={() => {
+        <StyledToolbarIcon
+            isMinimized={props.isMinimized}
+            isOpen={props.isOpen}
+            onClick={() => {
             updateAppData({
                 ...appsData[props.appID],
                 isOpen: true,
+                isMinimized: false,
             }, props.appID);
             console.log(appsData)
         }}>

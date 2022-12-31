@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { DragEvent, FC } from "react";
 import StyledAppWindowHeading from "./AppWindowHeading.style";
 import ControlButtons from "./controlbuttons/ControlButtons.component";
 
@@ -14,7 +14,7 @@ interface AppWindowHeadingProps {
 
 const AppWindowHeading: FC<AppWindowHeadingProps> = (props) => {
 
-    const moveWindow = (event: any) => {
+    const moveWindow = (event: DragEvent) => {
         props.getCursorPosition(
             {
                 x: event.clientX,
@@ -22,11 +22,19 @@ const AppWindowHeading: FC<AppWindowHeadingProps> = (props) => {
             });
     };
 
+    // checking accesibility for onDragEnd for macOS.
+    const checkAccesibilityEvent = (event: DragEvent) => { 
+        if (navigator.userAgent.indexOf("Windows") !== -1) {
+            moveWindow(event)
+        }
+    }
+
     return (
         <StyledAppWindowHeading
             draggable="true"
             onDragCapture={(event) => moveWindow(event)}
-            onDragEnd={(event) => moveWindow(event)}
+            
+            onDragEnd={(event) => checkAccesibilityEvent(event)}
         >
         <div>
                 <img alt={props.appName} src={props.appIcon} />

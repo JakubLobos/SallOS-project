@@ -5,6 +5,7 @@ interface WindowWrapperProps {
     ypos?: number;
     xpos?: number;
     focused: boolean;
+    isMinimized: boolean,
 }
 
 const WindowWrapper = styled(DesktopBlurElement)<WindowWrapperProps>`
@@ -12,7 +13,7 @@ const WindowWrapper = styled(DesktopBlurElement)<WindowWrapperProps>`
     min-height: 510px;
     min-width: 480px;
     padding: 0 10px 10px 10px;
-    display: flex;
+    display: ${props => props.isMinimized ? "none" : "flex"};
     align-items: center;
     z-index: ${props => props.focused ? "100" : "1"};
     justify-content: center;

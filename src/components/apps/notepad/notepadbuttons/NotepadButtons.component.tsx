@@ -38,6 +38,7 @@ const NotepadButtons: FC<NotepadButtonsProps> = (props) => {
             isOpen: false,
             value: props.progress,
             isFocused: false,
+            isMinimized: false,
             isHidden: false,
         })
         console.log(appsData);

@@ -60,6 +60,7 @@ const responseConsoleCommand = (
             isOpen: false,
             isFocused: false,
             isHidden: false,
+            isMinimized: false,
             url: command[2],
         })
         console.log(appsData)

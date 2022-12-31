@@ -52,6 +52,7 @@ const AppWindow: FC<AppWindowProps> = (props) => {
                 console.log(appsData)
             }}
             focused={props.app.isFocused}
+            isMinimized={props.app.isMinimized}
             style={{
                 left: cursorPosition.x + "px",
                 top: cursorPosition.y + "px"
