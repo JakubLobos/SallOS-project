@@ -8,7 +8,9 @@ const UserIcon: FC = () => {
     const { desktopSettings } = useDesktopSettings();
 
     return (
-        <StyledUserIcon bgcolor={desktopSettings.userIconColor} alt="user icon" src={UserProfile} />
+        <StyledUserIcon
+            bgcolor={desktopSettings.userIconColor}
+            alt="user icon" src={UserProfile} />
     )
 }
 

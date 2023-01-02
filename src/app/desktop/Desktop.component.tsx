@@ -18,7 +18,7 @@ import AppPropertiesMenu from "./utils/apppropertiesmenu/AppPropertiesMenu.compo
 const Desktop: FC = () => {
     const navigate = useNavigate()
     const { sessionUser } = useSession();
-    const { desktopSettings, setDesktopSettings } = useDesktopSettings()
+    const { desktopSettings } = useDesktopSettings()
     const { appsData } = useAppsData();
 
     useEffect(() => {
@@ -26,19 +26,9 @@ const Desktop: FC = () => {
             navigate(getAuthPage())
         }
     });
-
-    const clearOpenedSysMenu:Function = () => {
-        setDesktopSettings({ //clearing properties menu, when right-click on app
-            ...desktopSettings,
-            AppPropertiesMenuShown: {
-                ...desktopSettings.AppPropertiesMenuShown,
-                isHidden: true,
-            },})
-    }
      
     return (
         <StyledDesktop
-            onMouseUp={() => clearOpenedSysMenu()}
             wallpaper={desktopSettings.wallpaper}>
             <PopUp />
             <AppPropertiesMenu />

@@ -3,7 +3,8 @@ import { FC, useState } from "react";
 import AppIframeContent from "./appiframecontent/AppIframeContent.component";
 import AppWindowHeading from "./appwindowheading/AppWindowHeading.component";
 import BuildInAppContent from "./buildinappcontent/BuildInAppContent.component";
-import { useAppsData } from "../../../../utilities/globalzustandstates/applications.data";
+import { appsDataProps, useAppsData } from "../../../../utilities/globalzustandstates/applications.data";
+import focusApp from "../../../../utilities/FocusApp";
 
 interface AppWindowProps {
     app?: any,
@@ -15,8 +16,6 @@ const AppWindow: FC<AppWindowProps> = (props) => {
         x: 30,
         y: 30,
     });
-
-    const {appsData, updateAppData} = useAppsData()
 
     //a function that checks whether the 
     //app is built-in or is added by user 
@@ -36,37 +35,24 @@ const AppWindow: FC<AppWindowProps> = (props) => {
 
     return (
         <WindowWrapper
-            onClick={() => {
-                appsData.filter(app => app.isFocused === true)
-                    .map(app => {
-                    updateAppData({
-                        ...appsData[app.id],
-                        isFocused: false,
-                    }, app.id);
-                })
+            onClick={() => focusApp(props.app)}
 
-                updateAppData({
-                    ...appsData[props.app.id],
-                    isFocused: true,
-                }, props.app.id);
-                console.log(appsData)
-            }}
-            focused={props.app.isFocused}
-            isMinimized={props.app.isMinimized}
             style={{
                 left: cursorPosition.x + "px",
                 top: cursorPosition.y + "px"
-            }}>
+            }}
+
+            focused={props.app.isFocused}
+            isMinimized={props.app.isMinimized}>
+            
             <AppWindowHeading
                 getCursorPosition={setCursorPosition}
                 appIcon={props.app.icon}
                 appName={props.app.name}
-                appID={props.app.id}
-            />
+                appID={props.app.id} />
+            
             <div className="content_wrapper">
-            {
-                getAppType()
-            }
+                {getAppType()}
             </div>
         </WindowWrapper>
     )

@@ -5,8 +5,17 @@ import StyledAppPropertiesMenu from "./AppPropertiesMenu.style";
 
 const AppPropertiesMenu: FC = () => {
 
-    const {desktopSettings} = useDesktopSettings()
+    const {desktopSettings, setDesktopSettings} = useDesktopSettings()
     const {updateAppData, appsData} = useAppsData()
+
+    const clearOpenedSysMenu:Function = () => {
+        setDesktopSettings({ //clearing properties menu, when cursor is not over menu
+            ...desktopSettings,
+            AppPropertiesMenuShown: {
+                ...desktopSettings.AppPropertiesMenuShown,
+                isHidden: true,
+            },})
+    }
 
     const pinApp:Function = () => {
         updateAppData({
@@ -25,6 +34,7 @@ const AppPropertiesMenu: FC = () => {
 
     return (
         <StyledAppPropertiesMenu
+            onMouseLeave={() => clearOpenedSysMenu()}
             posx={desktopSettings.AppPropertiesMenuShown.xpos}
             posy={desktopSettings.AppPropertiesMenuShown.ypos}
             isHidden={desktopSettings.AppPropertiesMenuShown.isHidden}>
