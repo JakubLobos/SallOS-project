@@ -1,5 +1,5 @@
 
-  <h2 align="center">SallOS</h2>
+  <h2 align="center">Project for a Mental Health Charity Organisation</h2>
   <p align="center">NOTE: The project is in the early development phase. There may be bugs, and solutions that will change in later phases of the project</p>
   <p>live: <a href="https://mentalhealthcharity-front-production.up.railway.app/" target="_blank" rel="noopener">LIVE</a>
   
