@@ -58,5 +58,5 @@
   
   <h3 id="questions">Questions?</h3>
   <hr>
-  <p>Project is part of my portfolio, if you are interested in me please contact me at: <a href="mailto:saltver2@onet.eu">saltver2@onet.eu</a> or <a href="mailto:JakubLobos@webrance.com">JakubLobos@webrance.com</a></p>
+  <p>Project is part of my portfolio, if you are interested in me please contact me at: <a href="mailto:jakubloboskontakt@gmail.com">jakubloboskontakt@gmail.com</a></p>
   <p>Social media: <a href="https://www.facebook.com/profile.php?id=100014322582448" target="_blank" rel="noopener">facebook</a></p>
