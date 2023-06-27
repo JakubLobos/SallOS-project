@@ -24,7 +24,7 @@ const AppWindowHeading: FC<AppWindowHeadingProps> = (props) => {
 
     // checking accesibility for onDragEnd for macOS.
     const checkAccesibilityEvent = (event: DragEvent) => { 
-        if (navigator.userAgent.indexOf("Windows") !== -1) {
+        if (navigator.userAgent.indexOf("Linux") !== -1 || navigator.userAgent.indexOf("Windows") !== -1) {
             moveWindow(event)
         }
     }
@@ -32,9 +32,9 @@ const AppWindowHeading: FC<AppWindowHeadingProps> = (props) => {
     return (
         <StyledAppWindowHeading
             draggable="true"
-            onDragCapture={(event) => moveWindow(event)}
-            
             onDragEnd={(event) => checkAccesibilityEvent(event)}
+            onDragCapture={(event) => moveWindow(event)}
+            onDragExit={(event) => moveWindow(event)}
         >
         <div>
                 <img alt={props.appName} src={props.appIcon} />
