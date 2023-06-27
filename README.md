@@ -2,7 +2,7 @@
 
   <h2 align="center">SallOS</h2>  
   <p align="center">The project was made by me. Includes an operating system simulator.The project is based on React, React-Router, Typescript, Styled-Components, Zustand, RestAPI, Axios</p>
-  <p>live: <a href="https://melodious-speculoos-31818c.netlify.app/" target="_blank" rel="noopener">SALLOS live</a>
+  <p>live: <a href="[https://melodious-speculoos-31818c.netlify.app/](https://649ae289e2201308119ed804--sensational-marigold-242c61.netlify.app/)" target="_blank" rel="noopener">SALLOS live</a>
   
   <details>
     <summary>Content</summary>
