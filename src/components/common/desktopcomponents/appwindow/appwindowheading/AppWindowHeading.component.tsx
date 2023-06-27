@@ -29,12 +29,23 @@ const AppWindowHeading: FC<AppWindowHeadingProps> = (props) => {
         }
     }
 
+    const isUserChrome = (event: DragEvent) => {
+        const isChrome = /Chrome/.test(navigator.userAgent);
+        if (isChrome) {
+            moveWindow(event)
+        }
+    }
+
+
     return (
         <StyledAppWindowHeading
             draggable="true"
             onDragEnd={(event) => checkAccesibilityEvent(event)}
             onDragCapture={(event) => moveWindow(event)}
             onDragExit={(event) => moveWindow(event)}
+
+            onDragEndCapture={(event) => isUserChrome(event)}
+            onDrag={(event) => isUserChrome(event)}
         >
         <div>
                 <img alt={props.appName} src={props.appIcon} />

@@ -26,7 +26,7 @@ export const appsData: Array<appsDataProps> = [
     name: "chrome",
     type: "webapp",
     url: "https://www.google.pl/?igu=1",
-    icon: "https://pnggrid.com/wp-content/uploads/2021/04/Google-Chrome-Logo-2048x2048.png",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1024px-Google_Chrome_icon_%28February_2022%29.svg.png",
     isPinned: true,
     isOpen: false,
     isHidden: false,
